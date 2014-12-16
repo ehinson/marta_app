@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'home/busesarriving'=>'home#yourbuses_dropdown'
 
-  root 'home#radioselect'
+  root 'home#home'
 
   resources :selections
 

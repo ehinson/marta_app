@@ -1,0 +1,9 @@
+<div>
+	There are <%= @results.count %> bus routes currently.
+
+	<%  @results.each do |r|  %>
+	    latitude <%= r['LATITUDE']  %><br>
+	    longitude <%= r['LONGITUDE']  %><br>
+	    <hr>
+	    <%  end  %>
+</div>
