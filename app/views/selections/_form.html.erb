@@ -1,0 +1,22 @@
+<%= form_for(@selection) do |f| %>
+  <% if @selection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@selection.errors.count, "error") %> prohibited this selection from being saved:</h2>
+
+      <ul>
+      <% @selection.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- We're just gonna have one field to select a station name -->
+
+  <div class="field">
+    <!-- Below is the tag for a drop-down menu-->
+    <%= f.select :station_name, Station.all.collect{|station| [station.name]} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

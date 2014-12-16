@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MartaApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	There are <%= @results.count  %> bus routes currently.
+
+	<%  @results.each do |r|  %>
+	    latitude <%= r['LATITUDE']  %><br>
+	    longitude <%= r['LONGITUDE']  %><br>
+	    <hr>
+	    <%  end  %>
+
+<%= yield %>
+
+</body>
+</html>
