@@ -2,21 +2,35 @@
 	All the CSS classes are optional, and can be found in the application.css file, which you can copy from GitHub
 -->
 
-<div class ="scroll choose-a-station">
-	<h2 class = "orange-text"> Choose a Station!</h2>
-	<p><b>Where are you?</b></p>
-</div>
+<!-- <div class ="scroll choose-a-station"> -->
 
+	<div class="title"><h2> Choose a Station!</h2></div>
+	<div class= "where"><p><b>Where are you?</b></p></div>
+<!-- </div>
+ -->
 
 <div class = "radios">
 	<!--Below is the form for RAdio Buttons -->
+	<ul>
 	<%= form_tag("/home/yourbuses", method: "get") do  %>
 	<%= label_tag(:station, "")  %>
 	<br>
+
 	<%  @stations.each do |station|  %>
+	
 	  <!-- Loop through the array-->
-	  <%= radio_button_tag(:station, station) %><%= station %><br>
+	  <li><%= radio_button_tag(:station, station) %><span class= "select"><%= station %></span></li>
 	  <%  end  %>
-	  <%= submit_tag 'Check for buses!', :class => 'btn submit-button'  %>
+	
+	  <span class="submit"><%= submit_tag 'Check for buses!', :class => 'btn submit-button'  %></span>
 	  <%  end  %>
+	  </ul>
 	</div>
+<div class="results">
+	<% @results.each do |r| %>
+		<% if r['TIMEPOINT'].include? "Inman Park" %>
+		  <%= r['ROUTE'] + " will be stopping at Inman Park Station." %> <br />
+		  <hr>
+		<% end %>
+	<% end %>
+</div>

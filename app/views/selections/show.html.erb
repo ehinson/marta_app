@@ -5,5 +5,16 @@
   <%= @selection.station_name %>
 </p>
 
+<% @results.each do |result| %>
+
+  <% if result['TIMEPOINT'].include? @selection.station_name %>
+
+    <%= result['ROUTE'] + " will be stopping at #{@selection.station_name}." %> <br />
+
+    <hr>
+
+  <% end %>
+
+<% end %>
 <%= link_to 'Edit', edit_selection_path(@selection) %> |
 <%= link_to 'Back', selections_path %>

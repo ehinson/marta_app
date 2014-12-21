@@ -29,7 +29,7 @@ class SelectionsController < ApplicationController
     respond_to do |format|
       if @selection.save
         #redirect the path below!
-        format.html { redirect_to busesarriving_path, notice: 'Selection was successfully created.' }
+        format.html { redirect_to home_busesarriving_path, notice: 'Selection was successfully created.' }
         format.json { render :show, status: :created, location: @selection }
       else
         format.html { render :new }

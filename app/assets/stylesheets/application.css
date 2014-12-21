@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    letter-spacing: .5px;
+    background-color: white;
+    background: url('https://ununsplash.imgix.net/43/tbExnLgTFScrSctjStm4_IMG_0684.JPG?q=75&amp;fm=jpg&amp;s=ca75e884850de971a384a0dad6fe1b91')no-repeat center center fixed;
+    background-size: cover;
+ }
+
+
+
+ .container {
+ 	background-color: rgba(255,255,255,.9);
+/* 	width: 100%;
+*/ 	margin; auto;
+ 	padding-left:0px;
+ }
+
+ .row {
+ 	background-image: url("/images/trolley.jpeg") no-repeat center center fixed;
+ }
+
+ li {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 50px;
+ }
+
+p{
+	letter-spacing: 1px;
+	padding-left: 50px;
+	padding-top: 60px;
+
+}
+ 
+ .select {
+ 	padding-left: 10px;
+ }
+ .submit, .results{
+ 	padding-left: 50px;
+ }
+ .title{
+ 	margin: auto;
+ 	background-color: orange;
+ 	height: 50px;
+ 	padding-left: 20px;
+ 	position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+ 	max-width: 960px;
+
+ }
+ .title h2{
+ 	color: white;
+ 	letter-spacing: 1px;
+
+ }
+
+ input[type="submit"] {
+    border-color: orange;
+ }
